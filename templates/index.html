@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+     <link rel=stylesheet href="{{ url_for('static', filename='css/home.css') }}">
+    <meta charset="UTF-8">
+    <title>Disney++</title>
 </head>
 <body>
-	<h1>Submit a Post</h1>
-	<form action='/' method='post' class="submit_form">
-		<input placeholder='Name' name='name'>
-		<input placeholder='Post' name='content'>
-		<input type='submit' value='Submit'>
-	</form>
-	<div class="history_posts">
-		<h1>All Posts</h1>
-		{% for post in all_posts %}
-		<p> {{ post[1] +': '+  post[2] }} </p>
-		{% endfor %}
-	</div>
+
+<div class="content">
+    {% for photo in photos %}
+    <a href = "{{ url_for('objectpage', name = photo.split('/')[1].split('.jpeg')[0]) }}">
+         <li>
+             <img src={{url_for('static', filename=photo)}}>
+             <p> {{ photo.split('/')[1].split('.jpeg')[0] }} </p>
+         </li>
+    </a>
+    {% endfor %}
+</div>
+
 </body>
 </html>

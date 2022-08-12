@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this is the video</title>
+</head>
+<body>
+    <video id="vid" width="800" height="800" controls>
+        <source src={{url_for('static', filename=path)}} type='video/mp4'>
+        <source src={{url_for('static', filename=path)}} type="video/ogg">
+
+    </video>
+</body>
+</html>

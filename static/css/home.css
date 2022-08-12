@@ -1,0 +1,42 @@
+body{
+background-color:black;
+}
+
+.content {
+margin-left: 3%;
+display: flex;
+flex-wrap: wrap;
+justify-content: start;
+background-image: url('../img/index.jpeg');
+}
+
+li {
+height:250px;
+width:210px;
+margin:5px;
+border: 2px solid khaki;
+list-style-type: none;
+text-align:center;
+padding-bottom:40px;
+padding-top:10px;
+padding-right:10px;
+padding-left:10px;
+}
+
+li:hover {
+height:260px;
+width:220px;
+border: 2px solid khaki;
+box-shadow: 5px 5px 40px goldenrod inset, 3px 0px 5px goldenrod;
+}
+
+p {
+color:white;
+height: 10%;
+width: 100%;
+}
+
+img {
+height: 80%;
+width: 100%;
+}

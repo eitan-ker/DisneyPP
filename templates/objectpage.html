@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel=stylesheet href="{{ url_for('static', filename='css/objectpage.css') }}">
+    <meta charset="UTF-8">
+    <title>movie/series</title>
+</head>
+<body>
+<div class="content">
+    <h1>This is {{ name }}!</h1>
+    <div class="info">
+        <img src={{url_for('static', filename=path)}}>
+        <div class="description" dir="rtl" style="text-align:right;">
+            <h3>Description:</h3>
+            <p>{{ des_text }}</p>
+        </div>
+    </div>
+    <div class="to_watch">
+        {% for obj in versions_series_to_show %}
+            <a href = "{{ url_for('showvideo', video_name = obj) }}">
+                <p> {{ obj }}</p>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
